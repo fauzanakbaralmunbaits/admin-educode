@@ -1,4 +1,4 @@
-sidebar -->
+<!-- sidebar -->
 <header class="side-header light-skin expand-header">
   <div class="nav-head">Main Navigation <span class="menu-trigger"><i class="ion-android-menu"></i></span></div>
   <nav class="custom-scrollbar">
