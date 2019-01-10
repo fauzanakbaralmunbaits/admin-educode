@@ -1,6 +1,6 @@
 <!-- footer -->
 <footer>
-  <p>Copyright <a href="#" title="">Example Company</a> &amp; 2017 - 2018</p>
-  <span>10GB of 250GB Free.</span>
+  <p>Copyright 2019 - Zawya Template</p>
+  <span><a href="#" title="">Educode Company</a></span>
 </footer>
 <!-- footer -->
