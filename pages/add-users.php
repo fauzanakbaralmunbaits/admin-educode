@@ -27,17 +27,17 @@
 
                 <div class="col-md-12 col-sm-12 col-lg-12">
                 	<strong>Fullname</strong>
-                    <input class="brd-rd5" type="text" placeholder="Fullname*" />
+                    <input class="brd-rd5" type="text" placeholder="Fullname*" required/>
                 </div>
 
                 <div class="col-md-12 col-sm-12 col-lg-12">
                 	<strong>Email</strong>
-                    <input class="brd-rd5" type="email" placeholder="admin@educode.com*" />
+                    <input class="brd-rd5" type="email" placeholder="admin@educode.com*" required/>
                 </div>
 
                 <div class="col-md-12 col-sm-12 col-lg-12">
                 	<strong>Password</strong>
-                    <input class="brd-rd5" type="password" placeholder="******" />
+                    <input class="brd-rd5" type="password" placeholder="******" required/>
                 </div>
                 
                 <div class="col-md-12 col-sm-12 col-lg-12">
@@ -50,7 +50,6 @@
                     <div class="slct-bx">
                         <span>
                             <select>
-                                <option>Otorisasi*</option>
                                 <option>Administrasi</option>
                                 <option>User</option>
                             </select>
@@ -59,7 +58,7 @@
                 </div>
 
                 <div class="col-md-12 col-sm-12 col-lg-12">
-                    <button class="brd-rd30 btn btn-info" type="submit">Submit</button>
+                    <button class="brd-rd5 btn btn-info" type="submit"> Submit</button>
                 </div>
             </div>
         </form>

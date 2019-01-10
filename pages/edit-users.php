@@ -19,7 +19,12 @@
 	        	<div class="col-md-12 col-sm-12 col-lg-12">
 	                <div class="profile-info-wrp edit-prf">
 	                        <div class="insta-wrp">
-	                            <span><img id="rslt-img" class="brd-rd50" src="assets/images/resource/insta-dp.jpg" alt="" /><span class="sts online"></span><label class="fileContainer brd-rd50"><i class="fa fa-camera"></i><input id="upld-file" type="file" /></label></span>
+	                            <span>
+	                            	<img id="rslt-img" class="brd-rd50" src="assets/images/resource/insta-dp.jpg" alt="" />
+	                            	<span class="sts online"></span>
+	                            	<label class="fileContainer brd-rd50"><i class="fa fa-camera"></i>
+	                            	<input id="upld-file" type="file" /></label>
+	                            </span>
 	                        </div>
 	                </div>
 	        	</div>
@@ -38,17 +43,17 @@
 
 		                <div class="col-md-12 col-sm-12 col-lg-12">
 		                	<strong>Fullname</strong>
-		                    <input class="brd-rd5" type="text" />
+		                    <input class="brd-rd5" type="text" required/>
 		                </div>
 
 		                <div class="col-md-12 col-sm-12 col-lg-12">
 		                	<strong>Email</strong>
-		                    <input class="brd-rd5" type="email" />
+		                    <input class="brd-rd5" type="email" required/>
 		                </div>
 
 		                <div class="col-md-12 col-sm-12 col-lg-12">
 		                	<strong>Password</strong>
-		                    <input class="brd-rd5" type="password" />
+		                    <input class="brd-rd5" type="password" required/>
 		                </div>
 
 		                <div class="col-md-12 col-sm-12 col-lg-12">
@@ -56,7 +61,6 @@
 		                    <div class="slct-bx">
 		                        <span>
 		                            <select>
-		                                <option>Otorisasi*</option>
 		                                <option>Administrasi</option>
 		                                <option>User</option>
 		                            </select>
@@ -65,7 +69,7 @@
 		                </div>
 
 		                <div class="col-md-12 col-sm-12 col-lg-12">
-		                    <button class="brd-rd30 btn btn-info" type="submit">Submit</button>
+		                    <button class="brd-rd5 btn btn-info" type="submit">Submit</button>
 		                </div>
 		            </div>
 		        </form>
