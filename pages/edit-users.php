@@ -1,3 +1,11 @@
+<?php
+	$id = $_GET['id'];
+
+	$r = $con->query("SELECT * FROM tb_users WHERE id = '$id'");
+	foreach ($r as $rr) {
+        // $id = $rr['id'];
+?>
+
 <!-- Page Top -->
 <div class="pg-tp">
     <i class="ion-cube"></i>
@@ -15,7 +23,9 @@
 		<!-- <div class="widget-title2">
             <h4>Hoverable Table</h4>
         </div> -->
-	        <div class="col-md-4 col-sm-12 col-lg-4">
+        <form class="form-wrp">
+        	<div class="row">
+        	<div class="col-md-3 col-sm-12 col-lg-3">
 	        	<div class="col-md-12 col-sm-12 col-lg-12">
 	                <div class="profile-info-wrp edit-prf">
 	                        <div class="insta-wrp">
@@ -23,15 +33,15 @@
 	                            	<img id="rslt-img" class="brd-rd50" src="assets/images/resource/insta-dp.jpg" alt="" />
 	                            	<span class="sts online"></span>
 	                            	<label class="fileContainer brd-rd50"><i class="fa fa-camera"></i>
-	                            	<input id="upld-file" type="file" /></label>
+	                            	<input id="upld-file" type="file" name="photo" /></label>
 	                            </span>
 	                        </div>
 	                </div>
 	        	</div>
 	        </div>
 
-	        <div class="col-md-8 col-sm-12 col-lg-8">
-	        	<form class="form-wrp">
+	        <div class="col-md-9 col-sm-12 col-lg-9">
+	        	<!-- <form class="form-wrp"> -->
 		            <div class="row mrg20">
 
 		                <!-- <div class="col-md-6 col-sm-6 col-lg-6">
@@ -43,17 +53,17 @@
 
 		                <div class="col-md-12 col-sm-12 col-lg-12">
 		                	<strong>Fullname</strong>
-		                    <input class="brd-rd5" type="text" required/>
+		                    <input class="brd-rd5" type="text" value="<?php echo $rr['fullname'];?>" required/>
 		                </div>
 
 		                <div class="col-md-12 col-sm-12 col-lg-12">
 		                	<strong>Email</strong>
-		                    <input class="brd-rd5" type="email" required/>
+		                    <input class="brd-rd5" type="email" value="<?php echo $rr['email'];?>" required/>
 		                </div>
 
 		                <div class="col-md-12 col-sm-12 col-lg-12">
 		                	<strong>Password</strong>
-		                    <input class="brd-rd5" type="password" required/>
+		                    <input class="brd-rd5" type="password" value="<?php echo $rr['password'];?>" required/>
 		                </div>
 
 		                <div class="col-md-12 col-sm-12 col-lg-12">
@@ -61,8 +71,8 @@
 		                    <div class="slct-bx">
 		                        <span>
 		                            <select>
-		                                <option>Administrasi</option>
-		                                <option>User</option>
+		                                <option <?php if($rr['otorisasi']=='Administrator'){echo "selected"; } ?> >Administrator</option>
+		                                <option <?php if($rr['otorisasi']=='User'){echo "selected"; } ?> >User</option>
 		                            </select>
 		                        </span>
 		                    </div>
@@ -72,9 +82,15 @@
 		                    <button class="brd-rd5 btn btn-info" type="submit">Submit</button>
 		                </div>
 		            </div>
-		        </form>
+		        <!-- </form> -->
 	        </div>
-        
+	    	</div>
+        </form>
+	        
     	</div>
 	</div>
 </div>
+
+<?php
+	}
+?>

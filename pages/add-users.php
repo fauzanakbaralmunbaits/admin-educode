@@ -18,39 +18,32 @@
 		<form class="form-wrp">
             <div class="row mrg20">
 
-                <!-- <div class="col-md-6 col-sm-6 col-lg-6">
-                    <input class="brd-rd5" type="text" placeholder="First Name*" />
-                </div>
-                <div class="col-md-6 col-sm-6 col-lg-6">
-                    <input class="brd-rd5" type="text" placeholder="Last Name*" />
-                </div> -->
-
                 <div class="col-md-12 col-sm-12 col-lg-12">
                 	<strong>Fullname</strong>
-                    <input class="brd-rd5" type="text" placeholder="Fullname*" required/>
+                    <input class="brd-rd5" name="fullname" type="text" placeholder="Fullname*" required/>
                 </div>
 
                 <div class="col-md-12 col-sm-12 col-lg-12">
                 	<strong>Email</strong>
-                    <input class="brd-rd5" type="email" placeholder="admin@educode.com*" required/>
+                    <input class="brd-rd5" name="email" type="email" placeholder="admin@educode.com*" required/>
                 </div>
 
                 <div class="col-md-12 col-sm-12 col-lg-12">
                 	<strong>Password</strong>
-                    <input class="brd-rd5" type="password" placeholder="******" required/>
+                    <input class="brd-rd5" name="password" type="password" placeholder="******" required/>
                 </div>
                 
                 <div class="col-md-12 col-sm-12 col-lg-12">
                 	<strong>Photo</strong>
-                	<input type="file" name="">
+                	<input type="file" name="photo">
             	</div>
 
                 <div class="col-md-12 col-sm-12 col-lg-12">
                 	<strong>Otorisasi</strong>
                     <div class="slct-bx">
                         <span>
-                            <select>
-                                <option>Administrasi</option>
+                            <select name="otorisasi">
+                                <option>Administrator</option>
                                 <option>User</option>
                             </select>
                         </span>

@@ -43,7 +43,7 @@
                     <td></td>
                     <td><?php echo $rr['otorisasi'];?></td>
                     <td>
-                        <a href="index.php?pages=edit-users" title="" class="brd-rd5 btn scl-btn2 twitter-clr"><i class="fa fa-pencil"></i></a>
+                        <a href="index.php?pages=edit-users&id=<?php echo $rr['id'];?>" title="" class="brd-rd5 btn scl-btn2 twitter-clr"><i class="fa fa-pencil"></i></a>
                         <a href="#" title="" class="brd-rd5 btn scl-btn2 youtube-clr"><i class="fa fa-trash"></i></a>
                     </td>
                 </tr>
