@@ -9,7 +9,7 @@
     <ul class="drp-sec">
       <li class="has-drp"><a href="#" title=""><i class="fa fa-folder-o"></i> <span>Master</span></a>
         <ul class="sb-drp">
-          <li><a href="#" title="">Users</a></li>
+          <li><a href="index.php?pages=users" title="">Users</a></li>
         </ul>
       </li>
     </ul>
