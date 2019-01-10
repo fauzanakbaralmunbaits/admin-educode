@@ -1,3 +1,7 @@
+<?php
+isset ($_GET['pages']) ? $pages = $_GET['pages'] : $pages = 'home';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,7 +44,16 @@
 <!-- semua isi -->
 
     <?php
-            include 'pages/home.php';
+        // if(isset($_SESSION['pesan'])){echo $_SESSION['pesan']; 
+        //     unset($_SESSION['pesan']);}
+
+        // if(file_exists('page/'.$page.'.php')){
+        //     include ('pages/'.$pages.'.php');
+        // }else{
+        //     include ('pages/404.php');
+        // }
+
+        include ('pages/'.$pages.'.php');
     ?>
 
 <!-- semua isi -->
