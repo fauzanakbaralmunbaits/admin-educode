@@ -1,3 +1,3 @@
 <?php
-	$con = new mysqli('localhost','root','','db_educode');
+	$con = new mysqli('localhost','root','','db_admin');
 ?>
