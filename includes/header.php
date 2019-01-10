@@ -1,7 +1,7 @@
 <!-- header -->
 <div class="topbar">
   <div class="logo">
-    <h1><a href="#" title=""><img src="assets/images/logo1.png" alt="" /></a></h1>
+    <h1><a href="#" title=""><img src="assets/images/logo-dark.png" style="width: 150px; height: 70px;" alt="" /></a></h1>
   </div>
   <div class="topbar-data">
     <ul class="tobar-links">
