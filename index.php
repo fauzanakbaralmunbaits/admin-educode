@@ -1,4 +1,5 @@
 <?php
+require_once('includes/config.php');
 isset ($_GET['pages']) ? $pages = $_GET['pages'] : $pages = 'home';
 ?>
 

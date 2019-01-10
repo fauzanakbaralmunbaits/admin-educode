@@ -31,18 +31,25 @@
                 </tr>
             </thead>
             <tbody>
+                <?php
+                    $r = $con->query("SELECT * FROM tb_users");
+                    while ($rr = $r->fetch_array()) {
+                ?>
                 <tr>
                     <th>-</th>
-                    <td>Administrator</td>
-                    <th>admin@educode.com</th>
-                    <td>123456</td>
+                    <td><?php echo $rr['fullname'];?></td>
+                    <th><?php echo $rr['email'];?></th>
+                    <td><?php echo $rr['password'];?></td>
                     <td></td>
-                    <td>Administrator</td>
+                    <td><?php echo $rr['otorisasi'];?></td>
                     <td>
                         <a href="index.php?pages=edit-users" title="" class="brd-rd5 btn scl-btn2 twitter-clr"><i class="fa fa-pencil"></i></a>
                         <a href="#" title="" class="brd-rd5 btn scl-btn2 youtube-clr"><i class="fa fa-trash"></i></a>
                     </td>
                 </tr>
+                <?php
+                    }
+                ?>
             </tbody>
         </table>
     </div>
