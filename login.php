@@ -2,7 +2,7 @@
 <html>
 <head>
     <!-- Meta-Information -->
-    <title>Zawya Admin Panel</title>
+    <title>Back Office Educode</title>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,7 +61,6 @@
 
 </div>
 <!-- Login Wrapper -->
-
 
 <!-- Vendor: Javascripts -->
 <script src="assets/js/jquery.min.js" type="text/javascript"></script>
