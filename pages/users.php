@@ -49,7 +49,7 @@
                     <td>
                         <a href="index.php?pages=edit-users&id=<?php echo $rr['id'];?>" title="" class="brd-rd5 btn scl-btn2 twitter-clr"><i class="fa fa-pencil"></i></a>
                         <a href="" title="" class="brd-rd5 btn scl-btn2 twitter-clr" data-toggle="modal" data-target="#edit"><i class="fa fa-pencil"></i></a>
-                        <a href="" title="" class="brd-rd5 btn scl-btn2 youtube-clr"><i class="fa fa-trash"></i></a>
+                        <a href="controller/act-delete-users.php?id=<?php echo $rr['id'];?>" onclick="return confirm('Yakin ingin hapus data?')" title="" class="brd-rd5 btn scl-btn2 youtube-clr"><i class="fa fa-trash"></i></a>
                     </td>
                 </tr>
                 <?php
