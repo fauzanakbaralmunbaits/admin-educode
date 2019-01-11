@@ -184,7 +184,7 @@
           <i class="sts away"></i>
           <a class="green-bg brd-rd5" href="#" title=""><i class="fa fa-envelope"></i></a>
         </div>
-        <h5><a href="#" title="">John Smith</a></h5>
+        <h5><a href="#" title=""><?php echo $_SESSION['fullname']; ?></a></h5>
         <span>Co Worker</span>
         <i>076 9477 4896</i>
         <div class="act-pst-lk-stm">
@@ -192,7 +192,7 @@
           <a class="brd-rd5 blue-bg-hover" href="#" title=""><i class="ion-forward"></i> Reply</a>
         </div>
         <div class="usr-ft">
-          <a class="btn-danger" href="#" title=""><i class="fa fa-sign-out"></i> Logout</a>
+          <a class="btn-danger" href="logout.php" title=""><i class="fa fa-sign-out"></i> Logout</a>
         </div>
       </div>
     </div>

@@ -365,7 +365,7 @@
                 <input class="brd-rd5" type="text" placeholder="Type and hit Enter..." />
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
-            <a class="blue-bg brd-rd5" href="#" title="">Return To Home</a>
+            <a class="blue-bg brd-rd5" href="login.php" title="">Return To Home</a>
         </div>
         <footer>
           <p>Copyright <a href="#" title="">Example Company</a> &amp; 2017 - 2018</p>

@@ -38,17 +38,21 @@
                 <?php
                     $r = $con->query("SELECT * FROM tb_users");
                     while ($rr = $r->fetch_array()) {
+                        $id_user = $rr['id'];
+                        $fullname = $rr['fullname'];
                 ?>
                 <tr>
                     <th>-</th>
-                    <td><?php echo $rr['fullname'];?></td>
+                    <td><?php echo $fullname;?></td>
                     <th><?php echo $rr['email'];?></th>
                     <td><?php echo $rr['password'];?></td>
                     <td></td>
                     <td><?php echo $rr['otorisasi'];?></td>
                     <td>
                         <a href="index.php?pages=edit-users&id=<?php echo $rr['id'];?>" title="" class="brd-rd5 btn scl-btn2 twitter-clr"><i class="fa fa-pencil"></i></a>
-                        <a href="" title="" class="brd-rd5 btn scl-btn2 twitter-clr" data-toggle="modal" data-target="#edit"><i class="fa fa-pencil"></i></a>
+
+                        <a href="" class="brd-rd5 btn scl-btn2 twitter-clr" data-toggle="modal" data-target="#edit"><i class="fa fa-pencil"></i></a>
+
                         <a href="controller/act-delete-users.php?id=<?php echo $rr['id'];?>" onclick="return confirm('Yakin ingin hapus data?')" title="" class="brd-rd5 btn scl-btn2 youtube-clr"><i class="fa fa-trash"></i></a>
                     </td>
                 </tr>
@@ -128,9 +132,12 @@
             </div>
             <div class="modal-body">
             <?php
-            // buat dapetin id pake session login
-                $id = 3;
-            // buat dapetin id pake session login
+
+            // gimana cara lempar variabel ke id
+
+                $id = 2;
+
+            // gimana cara lempar variabel ke id
 
                 $r = $con->query("SELECT * FROM tb_users WHERE id = '$id'");
                 foreach ($r as $rr) {

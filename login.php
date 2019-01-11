@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,13 +38,13 @@
               <h4>Login to Admin</h4>
               <span>Fill your detail to get in</span>
           </div>
-          <form>
+          <form action="controller/act-login.php" method="POST">
               <div class="row mrg10">
                   <div class="col-md-12 col-sm-12 col-lg-12">
-                      <input class="brd-rd5" type="text" placeholder="User Name" />
+                      <input class="brd-rd5" name="email" type="email" placeholder="admin@educode.com" />
                   </div>
                   <div class="col-md-12 col-sm-12 col-lg-12">
-                      <input class="brd-rd5" type="password" placeholder="Password" />
+                      <input class="brd-rd5" name="password" type="password" placeholder="******" />
                   </div>
                   <div class="col-md-12 col-sm-12 col-lg-12">
                       <span class="chbx"><input type="checkbox" id="chk1" /><label for="chk1">Remember Me</label></span>
@@ -48,6 +52,9 @@
                   <div class="col-md-12 col-sm-12 col-lg-12">
                       <button class="green-bg brd-rd5" type="submit">Login Now</button>
                   </div>
+
+                  <?php  isset($_SESSION['error']) ? $e=$_SESSION['error'] : $e=""; echo $e; session_destroy();?>
+
                   <div class="col-md-12 col-sm-12 col-lg-12">
                       <a href="#" title="" class="frgt">Forget password?</a>
                   </div>

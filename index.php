@@ -1,6 +1,26 @@
 <?php
-require_once('includes/config.php');
-isset ($_GET['pages']) ? $pages = $_GET['pages'] : $pages = 'home';
+session_start();
+
+if (empty($_SESSION['email'])) {
+    header("location:login.php");
+  }else{
+    if (isset($_SESSION['id'])) {
+        $id = trim($_SESSION['id']);
+    }
+    if (isset($_SESSION['email'])) {
+        $id = trim($_SESSION['email']);
+    }
+    if (isset($_SESSION['photo'])) {
+        $photo = trim($_SESSION['photo']);
+    }
+    if (isset($_SESSION['fullname'])) {
+        $fullname = trim($_SESSION['fullname']);
+    }
+    if (isset($_SESSION['otorisasi'])) {
+        $otorisasi = trim($_SESSION['otorisasi']);
+    }
+    require_once('includes/config.php');
+    isset ($_GET['pages']) ? $pages = $_GET['pages'] : $pages = 'home';
 ?>
 
 <!DOCTYPE html>
@@ -45,16 +65,17 @@ isset ($_GET['pages']) ? $pages = $_GET['pages'] : $pages = 'home';
 <!-- semua isi -->
 
     <?php
+
         // if(isset($_SESSION['pesan'])){echo $_SESSION['pesan']; 
         //     unset($_SESSION['pesan']);}
 
-        // if(file_exists('page/'.$page.'.php')){
-        //     include ('pages/'.$pages.'.php');
-        // }else{
-        //     include ('pages/404.php');
-        // }
+        if(file_exists('pages/'.$pages.'.php')){
+            include ('pages/'.$pages.'.php');
+        }else{
+            include ('pages/404.php');
+        }
 
-        include ('pages/'.$pages.'.php');
+        // include ('pages/'.$pages.'.php');
     ?>
 
 <!-- semua isi -->
@@ -335,3 +356,7 @@ isset ($_GET['pages']) ? $pages = $_GET['pages'] : $pages = 'home';
 </script>
 </body>
 </html>
+
+<?php
+    }
+?>
