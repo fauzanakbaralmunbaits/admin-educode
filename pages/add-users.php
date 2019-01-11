@@ -15,7 +15,7 @@
             <h4>Hoverable Table</h4>
         </div> -->
 
-		<form class="form-wrp">
+		<form class="form-wrp" action="controller/act-add-users.php" method="POST">
             <div class="row mrg20">
 
                 <div class="col-md-12 col-sm-12 col-lg-12">

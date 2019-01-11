@@ -23,7 +23,7 @@
 		<!-- <div class="widget-title2">
             <h4>Hoverable Table</h4>
         </div> -->
-        <form class="form-wrp">
+        <form class="form-wrp" action="controller/act-edit-users.php?id=<?php echo $id; ?>" method="POST">
         	<div class="row">
         	<div class="col-md-3 col-sm-12 col-lg-3">
 	        	<div class="col-md-12 col-sm-12 col-lg-12">
@@ -53,24 +53,25 @@
 
 		                <div class="col-md-12 col-sm-12 col-lg-12">
 		                	<strong>Fullname</strong>
-		                    <input class="brd-rd5" type="text" value="<?php echo $rr['fullname'];?>" required/>
+		                	<input class="brd-rd5" type="hidden" name="id" value="<?php echo $rr['id'];?>" required/>
+		                    <input class="brd-rd5" type="text" name="fullname" value="<?php echo $rr['fullname'];?>" required/>
 		                </div>
 
 		                <div class="col-md-12 col-sm-12 col-lg-12">
 		                	<strong>Email</strong>
-		                    <input class="brd-rd5" type="email" value="<?php echo $rr['email'];?>" required/>
+		                    <input class="brd-rd5" type="email" name="email" value="<?php echo $rr['email'];?>" required/>
 		                </div>
 
 		                <div class="col-md-12 col-sm-12 col-lg-12">
 		                	<strong>Password</strong>
-		                    <input class="brd-rd5" type="password" value="<?php echo $rr['password'];?>" required/>
+		                    <input class="brd-rd5" type="password" name="password" value="<?php echo $rr['password'];?>" required/>
 		                </div>
 
 		                <div class="col-md-12 col-sm-12 col-lg-12">
 		                	<strong>Otorisasi</strong>
 		                    <div class="slct-bx">
 		                        <span>
-		                            <select>
+		                            <select name="otorisasi">
 		                                <option <?php if($rr['otorisasi']=='Administrator'){echo "selected"; } ?> >Administrator</option>
 		                                <option <?php if($rr['otorisasi']=='User'){echo "selected"; } ?> >User</option>
 		                            </select>
